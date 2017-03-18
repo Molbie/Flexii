@@ -13,25 +13,6 @@
 #endif
 
 
-public extension NSLayoutAnchor {
-    public typealias Anchor = NSLayoutAnchor
-    
-    @discardableResult
-    public func equal(to anchor: Anchor, offset: CGFloat = 0, priority: Priority = .required, active: Bool = true) -> Constraint {
-        return constraint(equalTo: anchor, constant: offset).with(priority).activate(active)
-    }
-    
-    @discardableResult
-    public func greaterThanOrEqual(to anchor: Anchor, offset: CGFloat = 0, priority: Priority = .required, active: Bool = true) -> Constraint {
-        return constraint(greaterThanOrEqualTo: anchor, constant: offset).with(priority).activate(active)
-    }
-    
-    @discardableResult
-    public func lessThanOrEqual(to anchor: Anchor, offset: CGFloat = 0, priority: Priority = .required, active: Bool = true) -> Constraint {
-        return constraint(lessThanOrEqualTo: anchor, constant: offset).with(priority).activate(active)
-    }
-}
-
 public extension XAxisAnchor {
     @discardableResult
     public func equal(toAxis axis: XAxisAnchor, offset: CGFloat = 0, priority: Priority = .required, active: Bool = true) -> Constraint {
